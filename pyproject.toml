@@ -1,0 +1,21 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [ "poetry-core" ]
+
+[tool.poetry]
+name = "demo-python-software-testing"
+version = "0.1.0"
+description = "A project to help demonstrate Python software testing."
+authors = [ "d33bs <dave.bunten@cuanschutz.edu>" ]
+readme = "README.md"
+packages = [
+  { include = "package_name", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^8.3.3"
+hypothesis = { extras = [ "cli" ], version = "^6.112.2" }
+
+[tool.setuptools_scm]
+root = "."
